@@ -1,0 +1,82 @@
+program FuncGrafica;
+vars
+int array[10], arrC[10], i;
+float f, arrB[10];
+
+function void testOnFunc(int arr[10])
+{
+    
+    i = int(5.10);
+    write(i);
+
+    f = float(5);
+    write(f);
+
+    f = pow(1.0, 2);
+    write(f);
+
+    f = rand();
+    write(f);
+
+    f = med(arr);
+    write(f);
+
+    f = moda(arr);
+    write(f);
+
+    f = var(arr);
+    write(f);
+
+    write(arr);
+
+    reg(arr);
+
+    plot(arr);
+}
+
+
+main(){
+    %load arrays
+    for i = 0 to 7 do {
+        f = rand();
+        array[i] = int(f * 10);
+
+        f = rand();
+        arrB[i] = f * 10;
+    }
+    
+    testOnFunc(array);
+
+
+    i = int(5.10);
+    write(i);
+    i = int(6.5);
+    write(i);
+
+    f = float(5);
+    write(f);
+
+    f = pow(1.0, 2);
+    write(f);
+
+    f = rand();
+    write(f);
+
+    f = med(array);
+    write(f);
+
+    f = moda(array);
+    write(f);
+
+    f = var(array);
+    write(f);
+
+    write(array);
+    write(arrB);
+
+    reg(array);
+    reg(arrB);
+
+    plot(array);
+    plot(arrB);
+}
